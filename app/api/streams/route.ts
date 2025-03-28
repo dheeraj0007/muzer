@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
     console.log(e.message);
     return NextResponse.json(
       {
-        message: "Error while adding a stream",
+        message: { msg: "Error while adding a stream", error: e.message },
       },
       {
         status: 411,
